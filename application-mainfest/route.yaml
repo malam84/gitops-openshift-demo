@@ -4,7 +4,7 @@ metadata:
   labels:
     app: helloworld-demo
   name: helloworld-demo
-  namespace: helloworld-demo
+  namespace: cicd-pipeline-demo
 spec:
   port:
     targetPort: 8080
