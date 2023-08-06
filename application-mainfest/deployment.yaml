@@ -1,0 +1,22 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: helloworld-demo
+  name: helloworld-demo
+  namespace: cicd-pipeline-demo
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: helloworld-demo
+  strategy: {}
+  template:
+    metadata:
+      labels:
+        app: helloworld-demo
+    spec:
+      containers:
+      - image: quay.io/malam/springboot-hello-world2:latest
+        name: helloworld-demo
